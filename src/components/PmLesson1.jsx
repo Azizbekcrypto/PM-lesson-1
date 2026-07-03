@@ -539,7 +539,7 @@ const RECAPS = {
         body: <>Hammaga birdek yoqadigan narsa bo'lmaydi: issiq choy istagan buviga ham, muzdek kola istagan bolaga ham <b>bir xil gapirsangiz</b> — ikkisi ham chiqib ketadi.</>,
         vis: <RcFlow items={['👵 buviga — issiq choy', '🧒 bolaga — muzdek kola']} sep="·" /> },
       { ic: '🔍', h: 'Aniq odam tanlash — kamchilik emas, KUCH',
-        body: <>«Issiq kunda chanqagan o'tkinchilar uchun park yonida muzdek limonad» — endi saytda nima yozishni aniq bilasiz: <b>qayerda, nechpul, qanchalik muzdek</b>.</>,
+        body: <>«Issiq kunda chanqagan yo'lovchilar uchun park yonida muzdek limonad» — endi saytda nima yozishni aniq bilasiz: <b>qayerda, nechpul, qanchalik muzdek</b>.</>,
         vis: <RcFlow items={['KIM aniq', 'MUAMMO aniq', 'YECHIM ham aniq']} />,
         ask: "O'zingiz izlagan narsani «hamma uchun» saytdan topish osonmi?" },
       { ic: '🚪', h: 'Aniqlik bo\'lmasa — odam chiqib ketadi',
@@ -1021,7 +1021,7 @@ const Screen1 = ({ screen, onNext, onPrev }) => {
   const isNarrow = useIsMobile(768);
   const [showSteps, setShowSteps] = useState(false);
   const FORMULA = [
-    { q: 'KIM?', a: 'Issiqda chanqagan o\'tkinchilar', ic: Ico.user },
+    { q: 'KIM?', a: 'Issiqda chanqagan yo\'lovchilar', ic: Ico.user },
     { q: 'MUAMMO?', a: 'Muzdek ichimlikni qayerdan topishni bilishmaydi', ic: Ico.problem },
     { q: 'YECHIM?', a: 'Limonad qayerda va nechpul — ko\'rsatadigan sayt', ic: Ico.solution }
   ];
@@ -1237,7 +1237,7 @@ const Screen5 = ({ screen, storedAnswer, onAnswer, onNext, onPrev }) => {
   const set = (m) => { setMode(m); setSeen(prev => { const n = new Set(prev); n.add(m); return n; }); };
   const V = {
     vague: { title: 'Hamma uchun ichimliklar sayti', note: 'Kim ichadi? Qachon? Qayerda? Hech narsa aniq emas. Issiq choy istagan buviga ham, muzdek kola istagan bolaga ham bir xil gapirasiz — natijada hech kimni qiziqtira olmaysiz.' },
-    specific: { title: 'Issiq kunda chanqagan o\'tkinchilar uchun — park yonida muzdek limonad', note: 'Aniq odam (issiqda chanqagan o\'tkinchi), aniq vaqt (issiq kun), aniq joy (park yoni). Endi saytda nima yozishni ham aniq bilasiz: qayerda, nechpul va qanchalik muzdek.' }
+    specific: { title: 'Issiq kunda chanqagan yo\'lovchilar uchun — park yonida muzdek limonad', note: 'Aniq odam (issiqda chanqagan o\'tkinchi), aniq vaqt (issiq kun), aniq joy (park yoni). Endi saytda nima yozishni ham aniq bilasiz: qayerda, nechpul va qanchalik muzdek.' }
   };
   useEffect(() => { if (done && storedAnswer === undefined) onAnswer(screen, { correct: true, picked: true }); }, [done]);
   return (
