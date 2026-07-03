@@ -1237,7 +1237,7 @@ const Screen5 = ({ screen, storedAnswer, onAnswer, onNext, onPrev }) => {
   const set = (m) => { setMode(m); setSeen(prev => { const n = new Set(prev); n.add(m); return n; }); };
   const V = {
     vague: { title: 'Hamma uchun ichimliklar sayti', note: 'Kim ichadi? Qachon? Qayerda? Hech narsa aniq emas. Issiq choy istagan buviga ham, muzdek kola istagan bolaga ham bir xil gapirasiz — natijada hech kimni qiziqtira olmaysiz.' },
-    specific: { title: 'Issiq kunda chanqagan yo\'lovchilar uchun — park yonida muzdek limonad', note: 'Aniq odam (issiqda chanqagan o\'tkinchi), aniq vaqt (issiq kun), aniq joy (park yoni). Endi saytda nima yozishni ham aniq bilasiz: qayerda, nechpul va qanchalik muzdek.' }
+    specific: { title: 'Issiq kunda chanqagan yo\'lovchilar uchun — park yonida muzdek limonad', note: 'Aniq odam (issiqda chanqagan yo\'lovchi), aniq vaqt (issiq kun), aniq joy (park yoni). Endi saytda nima yozishni ham aniq bilasiz: qayerda, nechpul va qanchalik muzdek.' }
   };
   useEffect(() => { if (done && storedAnswer === undefined) onAnswer(screen, { correct: true, picked: true }); }, [done]);
   return (
@@ -1769,7 +1769,7 @@ const Screen14 = ({ screen, onNext, onPrev }) => {
     return () => ts.forEach(clearTimeout);
   }, []);
   const EXS = [
-    { kim: 'Chanqagan o\'tkinchi', mu: 'ichimlik qayerdaligini bilmaydi', ye: 'Limonad sayti' },
+    { kim: 'Chanqagan yo\'lovchi', mu: 'ichimlik qayerdaligini bilmaydi', ye: 'Limonad sayti' },
     { kim: 'Non yopadigan buvi', mu: 'xaridor topolmaydi', ye: 'Non buyurtma sayti' },
     { kim: 'Avtobus kutgan o\'quvchi', mu: 'qachon kelishi noma\'lum', ye: 'Jonli xarita sayti' },
     { kim: 'Zerikkan siz', mu: 'nima ko\'rishni bilmaysiz', ye: 'YouTube' }
